@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>[Draft] AgentIDL: A Semantic Interface for Constrainable and Auditable Agents</title>
+
+  <script class="remove">
+    var respecConfig = {
+      specStatus: "CG-DRAFT",
+      shortName: "agent-idl",
+      publishDate: "2025-12-15",
+      github: "w3c-cg/s-agent-comm",
+      edDraftURI: "https://w3c-cg.github.io/s-agent-comm/liaison-note/",
+      latestVersion: "https://w3c-cg.github.io/s-agent-comm/liaison-note/",
+      editors: [
+        {
+          name: "Hsin-Yi (Tyson) Chen",
+          company: "SlashLife AI",
+          companyURL: "https://slashlife.ai",
+          orcid: "https://orcid.org/0009-0008-0338-1861",
+          mailto: "w3c@slashlife.ai"
+        }
+      ],
+      publishDate: "2025-12-15",
+    };
+  </script>
+
+  <script src="https://www.w3.org/Tools/respec/respec-w3c"></script>
+</head>
+
+<body>
+
+  <section id="abstract">
+    <p>
+      This note proposes <strong>AgentIDL</strong>, an implementation-independent
+      interface layer for agent systems.
+    </p>
+    <p>
+      As AI systems are increasingly deployed in production and industrial contexts
+      requiring stable behavior across heterogeneous environments, AgentIDL identifies
+      the need for a stable semantic boundary to support constraint, audit, and
+      interoperability at the level of intent.
+    </p>
+  </section>
+
+  <section id="sotd">
+    <p>
+      This document is a draft produced by a W3C Community Group.
+      It is not a W3C Recommendation and does not represent consensus of the W3C Membership.
+    </p>
+  </section>
+
+  <section>
+    <h2>Introduction and Motivation</h2>
+
+    <p>
+      As agent systems proliferate, current implementations commonly collapse
+      natural language interpretation, intent representation, execution structure,
+      and runtime control into a single layer.
+    </p>
+
+    <p>
+      This collapse impedes interoperability, auditability, and responsibility attribution.
+      The absence of an explicit interface layer between intent and execution constitutes
+      a structural gap in current agent architectures.
+    </p>
+
+    <p>
+      AgentIDL is proposed to address this gap.
+    </p>
+  </section>
+
+  <section>
+    <h2>Definition of Agent</h2>
+
+    <p>
+      For the purpose of this Community Group:
+    </p>
+
+    <blockquote>
+      <p>
+        <strong>An agent is an entity whose actions are subject to constraint and audit.</strong>
+      </p>
+    </blockquote>
+
+    <p>
+      This definition is intentionally minimal and does not assume autonomy,
+      intelligence, interaction model, or internal reasoning structure.
+    </p>
+
+    <p>
+      An entity that cannot, even in principle, be constrained or audited
+      does not fall within the scope of this work.
+    </p>
+  </section>
+
+  <section>
+    <h2>Architectural Role of AgentIDL</h2>
+
+    <p>
+      AgentIDL defines a semantic interface boundary between what is intended
+      and how it is executed.
+    </p>
+
+    <p>
+      It does not prescribe reasoning strategies, execution mechanisms,
+      or control-flow models.
+    </p>
+
+    <p>
+      AgentIDL functions as a semantic contract that enables intent to be expressed,
+      constrained, and examined independently of implementation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Alignment with WebIDL</h2>
+
+    <p>
+      AgentIDL is aligned with WebIDL at the level of architectural intent.
+    </p>
+
+    <p>
+      WebIDL establishes stable interfaces between web-exposed semantics
+      and heterogeneous browser engines without being defined by any single implementation.
+    </p>
+
+    <p>
+      AgentIDL applies the same principle to agent systems:
+      interface-first design, implementation independence, and interoperability
+      grounded in shared meaning.
+    </p>
+  </section>
+
+  <section>
+    <h2>Relationship to Frameworks and Protocols</h2>
+
+    <p>
+      AgentIDL is not an agent framework and is not an agent protocol.
+    </p>
+
+    <p>
+      Frameworks and protocols operate at the level of implementation and interaction.
+      AgentIDL operates at the level of intent-to-execution interface definition.
+    </p>
+
+    <p>
+      Compatibility with existing systems may exist, but such compatibility is
+      derivative rather than definitional.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Missing Layer</h2>
+
+    <p>
+      Current agent systems typically transition directly from natural language
+      or internal reasoning to framework-specific execution logic.
+    </p>
+
+    <p>
+      This transition lacks an explicit, stable interface.
+      AgentIDL introduces this missing layer by making intent representation,
+      constraints, and auditability explicit and independent of runtime.
+    </p>
+
+    <p>
+      At present, no mainstream agent implementation explicitly operates at this layer.
+    </p>
+  </section>
+
+  <section>
+    <h2>Interoperability and Intent Alignment</h2>
+
+    <p>
+      The primary interoperability concern addressed by AgentIDL is
+      natural language intent alignment.
+    </p>
+
+    <p>
+      Interoperability is evaluated by preservation of intent boundaries,
+      stability of meaning across execution contexts,
+      and resistance to semantic drift introduced by implementation assumptions.
+    </p>
+  </section>
+
+  <section>
+    <h2>Scope and Review Principles</h2>
+
+    <p>
+      Proposals to adjust the scope of AgentIDL must be justified at the level
+      of socio-technical compatibility.
+    </p>
+
+    <p>
+      Arguments based solely on implementation convenience or framework design
+      do not constitute sufficient grounds for scope modification.
+    </p>
+
+    <p>
+      Maintaining implementation neutrality is a prerequisite for interoperability.
+    </p>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+
+    <p>
+      AgentIDL formalizes an architectural boundary that is currently implicit and unstable.
+    </p>
+
+    <p>
+      By defining a semantic interface between intent and execution, grounded in
+      constrainability and auditability, AgentIDL provides a foundation for
+      interoperable and governable agent systems.
+    </p>
+
+    <p>
+      This note invites discussion on the role and shape of this missing layer,
+      without constraining future implementations.
+    </p>
+  </section>
+
+</body>
+
+</html>
