@@ -1,5 +1,8 @@
- {
-    "group":      [172564]
-,   "contacts":   ["ij@w3.org"]
-,   "repo-type":  "cg-report"
+{
+  "group": [172564],
+  "contacts": [
+    "ij@w3.org",
+    "w3c@slashlife.ai"
+  ],
+  "repo-type": "cg-report"
 }
